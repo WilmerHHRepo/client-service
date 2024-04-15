@@ -36,7 +36,7 @@ public class ClientServiceImpl implements ClientService{
     }
 
     @Override
-    public Mono<Client> findById(ObjectId id) {
+    public Mono<Client> findById(String id) {
         return clientRepository.findById(id);
     }
 
@@ -46,16 +46,16 @@ public class ClientServiceImpl implements ClientService{
     }
 
     @Override
-    public Mono<Client> updateClient(Client client, ObjectId id) {
+    public Mono<Client> updateClient(Client client, String id) {
         return clientRepository.save(client);
     }
 
     @Override
     public Mono<Client> deleteClient(String id) {
         ObjectId objectId = new ObjectId(id);
-        Mono<Client> client = findById(objectId);
-        Consumer<ObjectId> consumer = clientRepository::deleteById;
-        consumer.accept(objectId);
+        Mono<Client> client = findById(id);
+        Consumer<String> consumer = clientRepository::deleteById;
+        consumer.accept(id);
         return client;
     }
 }

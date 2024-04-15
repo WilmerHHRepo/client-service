@@ -42,7 +42,7 @@ public class ClientController {
     public Mono<Client> findById(@PathVariable String id){
         ObjectId objectId = new ObjectId(id);
         //Optional<Client> client = clientService.findById(clientRepository, objectId);
-        return clientService.findById(objectId);
+        return clientService.findById(id);
     }
 
     @PostMapping
@@ -56,7 +56,7 @@ public class ClientController {
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Mono<Client> updateClient(@PathVariable("id") String id, @RequestBody Client client){
         ObjectId objectId =  new ObjectId(id);
-        return clientService.updateClient(client, objectId);
+        return clientService.createClient(client);
     }
 
     @DeleteMapping("/{id}")

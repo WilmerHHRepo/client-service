@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 import java.util.List;
 
 
-public interface ClientRepository extends ReactiveMongoRepository<Client, ObjectId> {
+public interface ClientRepository extends ReactiveMongoRepository<Client, String> {
     @Query("{'name': {$regex: ?0 } }")
     Flux<List<Client>> findByName(String name);
 }

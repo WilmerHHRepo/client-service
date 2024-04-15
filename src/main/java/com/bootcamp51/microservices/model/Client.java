@@ -3,7 +3,6 @@ package com.bootcamp51.microservices.model;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 import java.util.List;
@@ -19,8 +18,8 @@ public class Client {
   /**
    * valor id.
    */
-  @Id()
-  private ObjectId _id;
+  @Id
+  private String id;
   /**
    * valor indTypeClient.
    */
@@ -37,6 +36,10 @@ public class Client {
    * valor desTypeDocument.
    */
   private String desTypeDocument;
+  /**
+   * valor numDocument.
+   */
+  private String numDocument;
   /**
    * valor name.
    */

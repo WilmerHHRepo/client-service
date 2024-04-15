@@ -33,7 +33,7 @@ public interface ClientService {
    * @param id Param input
    * @return Object Client
    */
-  Mono<Client> findById(ObjectId id);
+  Mono<Client> findById(String id);
 
   /**
    * Method for create client.
@@ -49,7 +49,7 @@ public interface ClientService {
    * @param client Param input
    * @return Object Client
    */
-  Mono<Client> updateClient(Client client, ObjectId id);
+  Mono<Client> updateClient(Client client, String id);
 
   /**
    * Method for delete client.
