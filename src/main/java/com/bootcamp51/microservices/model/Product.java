@@ -3,33 +3,40 @@ package com.bootcamp51.microservices.model;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
-import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 
 /**
  * Class Product model.
+ * author by Wilmer H.
  */
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Product {
+
   /**
-   * valor id.
+   * value id.
    */
-  private ObjectId id;
+  @Id
+  private String id;
+
   /**
-   * valor indTypeProduct.
+   * value indTypeProduct.
    */
   private String indTypeProduct;
+
   /**
-   * valor desTypeProduct.
+   * value desTypeProduct.
    */
   private String desTypeProduct;
+
   /**
-   * valor indProduct.
+   * value indProduct.
    */
   private String indProduct;
+
   /**
-   * valor desProduct.
+   * value desProduct.
    */
   private String desProduct;
 }

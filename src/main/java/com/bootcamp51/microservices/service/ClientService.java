@@ -1,31 +1,46 @@
 package com.bootcamp51.microservices.service;
 
 import com.bootcamp51.microservices.model.Client;
-import com.bootcamp51.microservices.repository.ClientRepository;
 import java.util.List;
-import org.bson.types.ObjectId;
-import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Class ClientService.
+ * Class ClientService service.
+ * author by Wilmer H.
  */
 public interface ClientService {
   /**
    * Method for findAllClient.
    *
-   * @return List Client
+   * @return List Client.
    */
-  Flux<List<Client>> findAllClient();
+  Flux<Client> findAllClient();
 
   /**
    * Method for findByName client.
    *
-   * @param name Param input
-   * @return Object Client
+   * @param name Param input.
+   * @return Object Client.
    */
   Flux<List<Client>> findByName(String name);
+
+  /**
+   * Method for findByNumAccount client.
+   *
+   * @param numAccount Param input.
+   * @return Object Client.
+   */
+  Mono<Client> findByNumAccount(String numAccount);
+
+  /**
+   * Method for findByNumAccount client.
+   *
+   * @param numDocument Param input.
+   * @return Object Client.
+   */
+  Mono<Client> findByNumDocument(String numDocument);
+
 
   /**
    * Method for findById client.

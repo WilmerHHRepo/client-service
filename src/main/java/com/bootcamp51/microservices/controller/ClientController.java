@@ -1,71 +1,83 @@
 package com.bootcamp51.microservices.controller;
 
 import com.bootcamp51.microservices.model.Client;
-import com.bootcamp51.microservices.repository.ClientRepository;
 import com.bootcamp51.microservices.service.ClientService;
+import java.util.List;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
+/**
+ * Class ClientController controller.
+ * author by Wilmer Huaqui.
+ */
 @RestController
 @RequestMapping("/bootcamp51/ms/client")
 public class ClientController {
 
-    @Autowired
-    private ClientService clientService;
+  @Autowired
+  private ClientService clientService;
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public Flux<List<Client>> findAllClient(){
-        //List<Client> lstClient = clientService.findAllClient();
-        return clientService.findAllClient();
-    }
+  @GetMapping
+  @ResponseStatus(HttpStatus.OK)
+  public Flux<Client> findAllClient() {
+    return clientService.findAllClient();
+  }
 
-    @GetMapping("/by-name/{name}")
-    @ResponseStatus(HttpStatus.OK)
-    public Flux<List<Client>> findByName(@PathVariable String name){
-        //List<Client> lstClient = clientService.findByName(clientRepository, name);
-        return clientService.findByName(name);
-    }
+  @GetMapping("/by-name/{name}")
+  @ResponseStatus(HttpStatus.OK)
+  public Flux<List<Client>> findByName(@PathVariable String name) {
+    return clientService.findByName(name);
+  }
 
-    @GetMapping("/by-id/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    public Mono<Client> findById(@PathVariable String id){
-        ObjectId objectId = new ObjectId(id);
-        //Optional<Client> client = clientService.findById(clientRepository, objectId);
-        return clientService.findById(id);
-    }
+  @GetMapping("/by-cta/{account}")
+  @ResponseStatus(HttpStatus.OK)
+  public Mono<Client> findByNumAccount(@PathVariable String account) {
+    return clientService.findByNumAccount(account);
+  }
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public Mono<Client> createClient(@RequestBody Client client){
-        //client = clientService.createClient(clientRepository, client);
-        return clientService.createClient(client);
-    }
+  @GetMapping("/by-document/{document}")
+  @ResponseStatus(HttpStatus.OK)
+  public Mono<Client> findByNumDocument(@PathVariable String document) {
+    return clientService.findByNumDocument(document);
+  }
 
-    @PutMapping("/{id}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public Mono<Client> updateClient(@PathVariable("id") String id, @RequestBody Client client){
-        ObjectId objectId =  new ObjectId(id);
-        return clientService.createClient(client);
-    }
+  @GetMapping("/by-id/{id}")
+  @ResponseStatus(HttpStatus.OK)
+  public Mono<Client> findById(@PathVariable String id) {
+    ObjectId objectId = new ObjectId(id);
+    return clientService.findById(id);
+  }
 
-    @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public Mono<Client> deleteClient(@PathVariable("id") String id){
-        //Optional<Client> client = clientService.deleteClient(clientRepository, id);
-        return clientService.deleteClient(id);
-    }
+  @PostMapping
+  @ResponseStatus(HttpStatus.CREATED)
+  public Mono<Client> createClient(@RequestBody Client client) {
+    return clientService.createClient(client);
+  }
 
+  @PutMapping("/{id}")
+  @ResponseStatus(HttpStatus.UPGRADE_REQUIRED)
+  public Mono<Client> updateClient(@PathVariable("id") String id, @RequestBody Client client) {
+    ObjectId objectId = new ObjectId(id);
+    return clientService.createClient(client);
+  }
+
+  @DeleteMapping("/{id}")
+  @ResponseStatus(HttpStatus.ACCEPTED)
+  public Mono<Client> deleteClient(@PathVariable("id") String id) {
+    return clientService.deleteClient(id);
+  }
 
 
 }

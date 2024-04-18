@@ -8,18 +8,33 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * Class Movement model.
+ * Class Commission model.
  * author by Wilmer H.
  */
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Movement {
+public class Commission extends Product {
 
   /**
    * value numOperation.
    */
   private String numOperation;
+
+  /**
+   * value indTypeDocument.
+   */
+  private String indTypeDocument;
+
+  /**
+   * value desTypeDocument.
+   */
+  private String desTypeDocument;
+
+  /**
+   * value numDocument.
+   */
+  private String numDocument;
 
   /**
    * value indTypeMovement.
@@ -32,14 +47,14 @@ public class Movement {
   private String desTypeMovement;
 
   /**
-   * value originAccount.
+   * value numAccount.
    */
-  private String originAccount;
+  private String numAccount;
 
   /**
-   * value destinationAccount.
+   * value availableBalance.
    */
-  private String destinationAccount;
+  private BigDecimal availableBalance;
 
   /**
    * value relativeAmount.
@@ -57,37 +72,7 @@ public class Movement {
   private BigDecimal commission;
 
   /**
-   * value establishment.
+   * value registrationDate.
    */
-  private String establishment;
-
-  /**
-   * value totalFees.
-   */
-  private Integer totalFees;
-
-  /**
-   * value pendingInstallments.
-   */
-  private Integer pendingInstallments;
-
-  /**
-   * value duesPaid.
-   */
-  private Integer duesPaid;
-
-  /**
-   * value indPurchaseOrigin.
-   */
-  private String indPurchaseOrigin;
-
-  /**
-   * value desPurchaseOrigin.
-   */
-  private String desPurchaseOrigin;
-
-  /**
-   * value resgistrationDate.
-   */
-  private Date resgistrationDate;
+  private Date registrationDate;
 }

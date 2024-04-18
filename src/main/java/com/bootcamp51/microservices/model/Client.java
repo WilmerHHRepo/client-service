@@ -7,49 +7,58 @@ import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
-
 /**
  * Class Client model.
+ * author by Wilmer H.
  */
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Client {
+
   /**
-   * valor id.
+   * value id.
    */
   @Id
   private String id;
+
   /**
-   * valor indTypeClient.
+   * value indTypeClient.
    */
   private String indTypeClient;
+
   /**
-   * valor desTypeClient.
+   * value desTypeClient.
    */
   private String desTypeClient;
+
   /**
-   * valor indTypeDocument.
+   * value indTypeDocument.
    */
   private String indTypeDocument;
+
   /**
-   * valor desTypeDocument.
+   * value desTypeDocument.
    */
   private String desTypeDocument;
+
   /**
-   * valor numDocument.
+   * value numDocument.
    */
   private String numDocument;
+
   /**
-   * valor name.
+   * value name.
    */
   private String name;
+
   /**
-  * valor lastName.
+   * value lastName.
    */
   private String lastName;
+
   /**
-   * valor products.
+   * value products.
    */
   private List<ProductSales> products;
 
