@@ -23,7 +23,7 @@ import reactor.core.publisher.Mono;
  * author by Wilmer Huaqui.
  */
 @RestController
-@RequestMapping("/bootcamp51/ms/client")
+@RequestMapping("")
 public class ClientController {
 
   @Autowired

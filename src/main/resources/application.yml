@@ -1,9 +1,14 @@
 server:
   port: 9010
-
-
+  servlet:
+    context-path: /bootcamp51/ms/client
 
 spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/bootcamp51?authSource=admin
+
+sonar:
+  host:
+    url: "http://XXX.XXX.X.XX:9000"
+  login: "XXXX"
