@@ -3,12 +3,17 @@ package com.bootcamp51.microservices.service.impl;
 import com.bootcamp51.microservices.model.Client;
 import com.bootcamp51.microservices.repository.ClientRepository;
 import com.bootcamp51.microservices.service.ClientService;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Consumer;
 import org.bson.types.ObjectId;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import javax.swing.text.html.Option;
 
 /**
  * Class ClientServiceImpl Service implements.
@@ -84,7 +89,22 @@ public class ClientServiceImpl implements ClientService {
    */
   @Override
   public Mono<Client> createClient(Client client) {
-    
+    Optional.ofNullable(client).ifPresent(c -> {
+
+      switch (c.getIndTypeClient()){
+        case "3":
+
+          break;
+        case "4":
+
+          break;
+      }
+
+
+    });
+
+
+
 
 
 
