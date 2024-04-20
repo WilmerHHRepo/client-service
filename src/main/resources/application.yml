@@ -1,14 +1,19 @@
 server:
-  port: 9020
+  port: 9010
   servlet:
-    context-path: /bootcamp51/ms/product
+    context-path: /bootcamp51/ms/client
 
 spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/bootcamp51?authSource=admin
 
-rutaApiClient: "http://localhost:9010/bootcamp51/ms/client"
+sonar:
+  host:
+    url: "http://XXX.XXX.X.XX:9000"
+  login: "XXXX"
+
+
+rutaApiClient: "http://localhost:9020/bootcamp51/ms/product"
 retryApiClient: 3
 timeIntervalApiClient: 3
-
