@@ -12,3 +12,8 @@ sonar:
   host:
     url: "http://XXX.XXX.X.XX:9000"
   login: "XXXX"
+
+
+rutaApiClient: "http://localhost:9020/bootcamp51/ms/product"
+retryApiClient: 3
+timeIntervalApiClient: 3
