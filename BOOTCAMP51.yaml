@@ -1,0 +1,441 @@
+openapi: 3.0.0
+info:
+  title: BOOTCAMP51
+  version: 1.0.0
+servers:
+  - url: http://localhost:9010
+  - url: http://localhost:9020
+  - url: http://localhost:9040
+tags:
+  - name: Client
+  - name: Product
+  - name: OperationSales
+  - name: OperationMovement
+  - name: Reports
+paths:
+  /bootcamp51/ms/client:
+    get:
+      tags:
+        - Client
+      summary: findAllClient
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/client/by-name/Wilmer:
+    get:
+      tags:
+        - Client
+      summary: findByName
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/client/by-id/661d528d8e97eb0bcc22b5cc:
+    get:
+      tags:
+        - Client
+      summary: findById
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/client/:
+    post:
+      tags:
+        - Client
+      summary: createClientCompanyPYME
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                indTypeClient: '4'
+                desTypeClient: Empresarial PYME
+                indTypeDocument: '1'
+                desTypeDocument: DNI
+                numDocument: '44444444'
+                name: Alejandro
+                lastName: El guerrero
+                products:
+                  - indTypeProduct: '1'
+                    desTypeProduct: Cuenta Bancaria (Pasivo)
+                    indProduct: '2'
+                    desProduct: Cuenta Corriente
+                    numAccount: 150-5555668899
+                    desCodeInterbank: N de cuenta interbancario (CCI)
+                    numAccountCodeInterbank: 123-150-5555668899-10
+                    countableBalance: '500.00'
+                    availableBalance: '500.00'
+                  - indTypeProduct: '2'
+                    desTypeProduct: Credito (Activos)
+                    indProduct: '6'
+                    desProduct: Tarjeta de Credito
+                    numAccount: 150-3355441122
+                    desCodeInterbank: N de cuenta interbancario (CCI)
+                    numAccountCodeInterbank: 123-150-3355441122-10
+                    countableBalance: '1000.00'
+                    availableBalance: '1000.00'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/client/661a91cf0656356f60aa9039:
+    put:
+      tags:
+        - Client
+      summary: updateClient
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                _id: 661a9b78881db1461c6f974b
+                indTypeClient: '1'
+                desTypeClient: Persona
+                indTypeDocument: '1'
+                desTypeDocument: DNI
+                name: Wilmer 123
+                lastName: Huaqui Huayllacayan
+                products:
+                  - indTypeProduct: '1'
+                    desTypeProduct: Cuenta Bancaria (Pasivoaaaaa)
+                    indProduct: '1'
+                    desProduct: Cuenta Ahorro
+                    numAccount: 200-1234567890
+                    desCodeInterbank: N de cuenta interbancario (CCI)
+                    numAccountCodeInterbank: 123-200-1234567890-10
+                    countableBalance: 3000
+                    availableBalance: 3000
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/client/661853de46b9713a0eeaf183:
+    delete:
+      tags:
+        - Client
+      summary: deleteClient
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/client/by-cta/200-1234567890:
+    get:
+      tags:
+        - Client
+      summary: findByNumAccount
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Client
+      summary: createClientPersonVIP
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                indTypeClient: '3'
+                desTypeClient: Persona VIP
+                indTypeDocument: '1'
+                desTypeDocument: DNI
+                numDocument: '44444444'
+                name: Alejandro
+                lastName: El guerrero
+                products:
+                  - indTypeProduct: '1'
+                    desTypeProduct: Cuenta Bancaria (Pasivo)
+                    indProduct: '1'
+                    desProduct: Cuenta Ahorro
+                    numAccount: 150-5555668899
+                    desCodeInterbank: N de cuenta interbancario (CCI)
+                    numAccountCodeInterbank: 123-150-5555668899-10
+                    countableBalance: '500.00'
+                    availableBalance: '500.00'
+                  - indTypeProduct: '2'
+                    desTypeProduct: Credito (Activos)
+                    indProduct: '6'
+                    desProduct: Tarjeta de Credito
+                    numAccount: 150-3355441122
+                    desCodeInterbank: N de cuenta interbancario (CCI)
+                    numAccountCodeInterbank: 123-150-3355441122-10
+                    countableBalance: '1000.00'
+                    availableBalance: '1000.00'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/client/by-document/12345678:
+    get:
+      tags:
+        - Client
+      summary: findByNumDocument
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product:
+    get:
+      tags:
+        - Product
+      summary: findAllclient
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Product
+      summary: createProduct
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                indTypeProduct: '1'
+                desTypeProduct: Pasivo
+                indProduct: '1'
+                desProduct: Cuenta Ahorro
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product/by-product/Ahorro:
+    get:
+      tags:
+        - Product
+      summary: findByDesProduct
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product/by-id/6618661dc614641c901b62e2:
+    get:
+      tags:
+        - Product
+      summary: findById
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product/6618661dc614641c901b62e2:
+    put:
+      tags:
+        - Product
+      summary: updateProduct
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Product
+      summary: deleteProduct
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product/sales/87654321:
+    patch:
+      tags:
+        - OperationSales
+      summary: ProductSalesPerson
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                productSales:
+                  indTypeProduct: '1'
+                  desTypeProduct: Cuenta Bancaria (Pasivo)
+                  indProduct: '1'
+                  desProduct: Cuenta Corriente
+                  numAccount: 300-6852365478
+                  desCodeInterbank: N de cuenta interbancario (CCI)
+                  numAccountCodeInterbank: 123-300-6852365478-10
+                  countableBalance: '0.00'
+                  availableBalance: '0.00'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product/sales:
+    patch:
+      tags:
+        - OperationSales
+      summary: ProductSalesCompany
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                productSales:
+                  indTypeProduct: '2'
+                  desTypeProduct: Credito (Activo)
+                  indProduct: '5'
+                  desProduct: Credito Empresarial
+                  numAccount: 300-1234567890
+                  desCodeInterbank: N de cuenta interbancario (CCI)
+                  numAccountCodeInterbank: 123-200-1234567890-10
+                  countableBalance: '3000.00'
+                  availableBalance: '3000.00'
+                jointAccount:
+                  members:
+                    - 661d4c588e97eb0bcc22b5ca
+                    - 661cbb0bc83a294483fe0c15
+                  indProduct: '5'
+                  desProduct: Credito Empresarial
+                  numAccount: 300-1234567890
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product/movement/300-6852365478:
+    patch:
+      tags:
+        - OperationMovement
+      summary: ProductMovementPersonDeposito
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                indTypeMovement: '1'
+                desTypeMovement: Depositos
+                operationAmount: '500'
+                establishment: Cajero aviacion
+                totalFees: '0'
+                pendingInstallments: '0'
+                duesPaid: '0'
+                indPurchaseOrigin: '1'
+                desPurchaseOrigin: Nacional
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product/movement/200-1234567890:
+    patch:
+      tags:
+        - OperationMovement
+      summary: ProductMovementPersonRetiro
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                indTypeMovement: '2'
+                desTypeMovement: Retiros
+                operationAmount: '10'
+                establishment: Agente
+                totalFees: '0'
+                pendingInstallments: '0'
+                duesPaid: '0'
+                indPurchaseOrigin: '1'
+                desPurchaseOrigin: Nacional
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product/movement/by-between-client/200-1234567890/and/200-0987654321:
+    patch:
+      tags:
+        - OperationMovement
+      summary: transferBetweenAccountsClient
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                indTypeMovement: '5'
+                desTypeMovement: Transferencia entre cuentas de cliente
+                operationAmount: '1000'
+                establishment: APP MOVIL
+                indPurchaseOrigin: '1'
+                desPurchaseOrigin: Nacional
+      parameters:
+        - name: document
+          in: query
+          schema:
+            type: integer
+          example: '12345678'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/product/movement/by-between-third-parties/200-1234567890/and/123-300-6543219875-10:
+    patch:
+      tags:
+        - OperationMovement
+      summary: transferBetweenAccountsthirdparties
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                indTypeMovement: '6'
+                desTypeMovement: transferencia entre cuentas a terceros
+                operationAmount: '640'
+                establishment: APP MOVIL
+                indPurchaseOrigin: '1'
+                desPurchaseOrigin: Nacional
+      parameters:
+        - name: originDocument
+          in: query
+          schema:
+            type: integer
+          example: '12345678'
+        - name: destinationDocument
+          in: query
+          schema:
+            type: integer
+          example: '87654321'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bootcamp51/ms/reports/by-TypeProduct:
+    get:
+      tags:
+        - Reports
+      summary: reports-by-TypeProduct
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
