@@ -4,7 +4,6 @@ import com.bootcamp51.microservices.dto.ProductSalesDTO;
 import com.bootcamp51.microservices.model.Client;
 import com.bootcamp51.microservices.model.ProductSales;
 import io.netty.handler.logging.LogLevel;
-import javafx.beans.binding.BooleanExpression;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

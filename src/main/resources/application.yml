@@ -6,12 +6,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/bootcamp51?authSource=admin
-
-sonar:
-  host:
-    url: "http://XXX.XXX.X.XX:9000"
-  login: "XXXX"
+      uri: mongodb://192.168.1.51:27017/bootcamp51?authSource=admin
 
 
 rutaApiClient: "http://localhost:9020/bootcamp51/ms/product"
