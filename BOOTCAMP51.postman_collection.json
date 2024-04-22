@@ -1,0 +1,702 @@
+{
+	"info": {
+		"_postman_id": "fea5ae8a-0d34-4a8c-bf95-dfe762f83af4",
+		"name": "BOOTCAMP51",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12685968"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "findAllClient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/by-name/Wilmer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								"by-name",
+								"Wilmer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/by-id/661d528d8e97eb0bcc22b5cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								"by-id",
+								"661d528d8e97eb0bcc22b5cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClientPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indTypeClient\":\"1\",\r\n    \"desTypeClient\":\"Persona\",\r\n    \"indTypeDocument\":\"1\",\r\n    \"desTypeDocument\":\"DNI\",\r\n    \"numDocument\":\"44444444\",\r\n    \"name\":\"Alejandro\",\r\n    \"lastName\":\"El guerrero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateClient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"661a9b78881db1461c6f974b\",\r\n    \"indTypeClient\": \"1\",\r\n    \"desTypeClient\": \"Persona\",\r\n    \"indTypeDocument\": \"1\",\r\n    \"desTypeDocument\": \"DNI\",\r\n    \"name\": \"Wilmer 123\",\r\n    \"lastName\": \"Huaqui Huayllacayan\",\r\n    \"products\": [\r\n        {\r\n            \"indTypeProduct\": \"1\",\r\n            \"desTypeProduct\": \"Cuenta Bancaria (Pasivoaaaaa)\",\r\n            \"indProduct\": \"1\",\r\n            \"desProduct\": \"Cuenta Ahorro\",\r\n            \"numAccount\": \"200-1234567890\",\r\n            \"desCodeInterbank\": \"N de cuenta interbancario (CCI)\",\r\n            \"numAccountCodeInterbank\": \"123-200-1234567890-10\",\r\n            \"countableBalance\": 3000.00,\r\n            \"availableBalance\": 3000.00\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/661a91cf0656356f60aa9039",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								"661a91cf0656356f60aa9039"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteClient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/661853de46b9713a0eeaf183",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								"661853de46b9713a0eeaf183"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClientCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indTypeClient\": \"2\",\r\n    \"desTypeClient\": \"Empresarial\",\r\n    \"indTypeDocument\": \"2\",\r\n    \"desTypeDocument\": \"RUC\",\r\n    \"numDocument\": \"21987654321\",\r\n    \"name\": \"Mixercom\",\r\n    \"lastName\": \"Soldimix SAC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByNumAccount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/by-cta/200-1234567890",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								"by-cta",
+								"200-1234567890"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByNumDocument",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/by-document/12345678",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								"by-document",
+								"12345678"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClientPersonVIP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indTypeClient\":\"3\",\r\n    \"desTypeClient\":\"Persona VIP\",\r\n    \"indTypeDocument\":\"1\",\r\n    \"desTypeDocument\":\"DNI\",\r\n    \"numDocument\":\"44444444\",\r\n    \"name\":\"Alejandro\",\r\n    \"lastName\":\"El guerrero\",\r\n    \"products\": [\r\n        {\r\n            \"indTypeProduct\":\"1\",\r\n            \"desTypeProduct\":\"Cuenta Bancaria (Pasivo)\",\r\n            \"indProduct\":\"1\",\r\n            \"desProduct\":\"Cuenta Ahorro\",\r\n            \"numAccount\":\"150-5555668899\",\r\n            \"desCodeInterbank\":\"N de cuenta interbancario (CCI)\",\r\n            \"numAccountCodeInterbank\":\"123-150-5555668899-10\",\r\n            \"countableBalance\":\"500.00\",\r\n            \"availableBalance\":\"500.00\"\r\n        }, {\r\n            \"indTypeProduct\":\"2\",\r\n            \"desTypeProduct\":\"Credito (Activos)\",\r\n            \"indProduct\":\"6\",\r\n            \"desProduct\":\"Tarjeta de Credito\",\r\n            \"numAccount\":\"150-3355441122\",\r\n            \"desCodeInterbank\":\"N de cuenta interbancario (CCI)\",\r\n            \"numAccountCodeInterbank\":\"123-150-3355441122-10\",\r\n            \"countableBalance\":\"1000.00\",\r\n            \"availableBalance\":\"1000.00\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/by-cta/200-1234567890",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								"by-cta",
+								"200-1234567890"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClientCompanyPYME",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indTypeClient\":\"4\",\r\n    \"desTypeClient\":\"Empresarial PYME\",\r\n    \"indTypeDocument\":\"1\",\r\n    \"desTypeDocument\":\"DNI\",\r\n    \"numDocument\":\"44444444\",\r\n    \"name\":\"Alejandro\",\r\n    \"lastName\":\"El guerrero\",\r\n    \"products\": [\r\n        {\r\n            \"indTypeProduct\":\"1\",\r\n            \"desTypeProduct\":\"Cuenta Bancaria (Pasivo)\",\r\n            \"indProduct\":\"2\",\r\n            \"desProduct\":\"Cuenta Corriente\",\r\n            \"numAccount\":\"150-5555668899\",\r\n            \"desCodeInterbank\":\"N de cuenta interbancario (CCI)\",\r\n            \"numAccountCodeInterbank\":\"123-150-5555668899-10\",\r\n            \"countableBalance\":\"500.00\",\r\n            \"availableBalance\":\"500.00\"\r\n        }, {\r\n            \"indTypeProduct\":\"2\",\r\n            \"desTypeProduct\":\"Credito (Activos)\",\r\n            \"indProduct\":\"6\",\r\n            \"desProduct\":\"Tarjeta de Credito\",\r\n            \"numAccount\":\"150-3355441122\",\r\n            \"desCodeInterbank\":\"N de cuenta interbancario (CCI)\",\r\n            \"numAccountCodeInterbank\":\"123-150-3355441122-10\",\r\n            \"countableBalance\":\"1000.00\",\r\n            \"availableBalance\":\"1000.00\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/bootcamp51/ms/client/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "findAllclient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByDesProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/by-product/Ahorro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"by-product",
+								"Ahorro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/by-id/6618661dc614641c901b62e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"by-id",
+								"6618661dc614641c901b62e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indTypeProduct\":\"1\",\r\n    \"desTypeProduct\":\"Pasivo\",\r\n    \"indProduct\":\"1\",\r\n    \"desProduct\":\"Cuenta Ahorro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/6618661dc614641c901b62e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"6618661dc614641c901b62e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/6618661dc614641c901b62e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"6618661dc614641c901b62e2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OperationSales",
+			"item": [
+				{
+					"name": "ProductSalesPerson",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productSales\":{\r\n        \"indTypeProduct\":\"1\",\r\n        \"desTypeProduct\":\"Cuenta Bancaria (Pasivo)\",\r\n        \"indProduct\":\"1\",\r\n        \"desProduct\":\"Cuenta Corriente\",\r\n        \"numAccount\":\"300-6852365478\",\r\n        \"desCodeInterbank\":\"N de cuenta interbancario (CCI)\",\r\n        \"numAccountCodeInterbank\":\"123-300-6852365478-10\",\r\n        \"countableBalance\":\"0.00\",\r\n        \"availableBalance\":\"0.00\"\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/sales/87654321",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"sales",
+								"87654321"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductSalesCompany",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productSales\":{\r\n        \"indTypeProduct\":\"2\",\r\n        \"desTypeProduct\":\"Credito (Activo)\",\r\n        \"indProduct\":\"5\",\r\n        \"desProduct\":\"Credito Empresarial\",\r\n        \"numAccount\":\"300-1234567890\",\r\n        \"desCodeInterbank\":\"N de cuenta interbancario (CCI)\",\r\n        \"numAccountCodeInterbank\":\"123-200-1234567890-10\",\r\n        \"countableBalance\":\"3000.00\",\r\n        \"availableBalance\":\"3000.00\"\r\n    },\r\n    \"jointAccount\":{\r\n        \"members\":[\"661d4c588e97eb0bcc22b5ca\", \"661cbb0bc83a294483fe0c15\"],\r\n        \"indProduct\":\"5\",\r\n        \"desProduct\": \"Credito Empresarial\",\r\n        \"numAccount\": \"300-1234567890\"\r\n    }\r\n\r\n}\r\n\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/sales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OperationMovement",
+			"item": [
+				{
+					"name": "ProductMovementPersonDeposito",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indTypeMovement\":\"1\",\r\n    \"desTypeMovement\":\"Depositos\",\r\n    \"operationAmount\":\"500\",\r\n    \"establishment\":\"Cajero aviacion\",\r\n    \"totalFees\":\"0\",\r\n    \"pendingInstallments\":\"0\",\r\n    \"duesPaid\":\"0\",\r\n    \"indPurchaseOrigin\":\"1\",\r\n    \"desPurchaseOrigin\":\"Nacional\"\r\n}\r\n\r\n\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/movement/300-6852365478",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"movement",
+								"300-6852365478"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductMovementPersonRetiro",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indTypeMovement\":\"2\",\r\n    \"desTypeMovement\":\"Retiros\",\r\n    \"operationAmount\":\"10\",\r\n    \"establishment\":\"Agente\",\r\n    \"totalFees\":\"0\",\r\n    \"pendingInstallments\":\"0\",\r\n    \"duesPaid\":\"0\",\r\n    \"indPurchaseOrigin\":\"1\",\r\n    \"desPurchaseOrigin\":\"Nacional\"\r\n}\r\n\r\n\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/movement/200-1234567890",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"movement",
+								"200-1234567890"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transferBetweenAccountsClient",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indTypeMovement\":\"5\",\r\n    \"desTypeMovement\":\"Transferencia entre cuentas de cliente\",\r\n    \"operationAmount\":\"1000\",\r\n    \"establishment\":\"APP MOVIL\",\r\n    \"indPurchaseOrigin\":\"1\",\r\n    \"desPurchaseOrigin\":\"Nacional\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/movement/by-between-client/200-1234567890/and/200-0987654321?document=12345678",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"movement",
+								"by-between-client",
+								"200-1234567890",
+								"and",
+								"200-0987654321"
+							],
+							"query": [
+								{
+									"key": "document",
+									"value": "12345678"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transferBetweenAccountsthirdparties",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indTypeMovement\":\"6\",\r\n    \"desTypeMovement\":\"transferencia entre cuentas a terceros\",\r\n    \"operationAmount\":\"640\",\r\n    \"establishment\":\"APP MOVIL\",\r\n    \"indPurchaseOrigin\":\"1\",\r\n    \"desPurchaseOrigin\":\"Nacional\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/bootcamp51/ms/product/movement/by-between-third-parties/200-1234567890/and/123-300-6543219875-10?originDocument=12345678&destinationDocument=87654321",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"product",
+								"movement",
+								"by-between-third-parties",
+								"200-1234567890",
+								"and",
+								"123-300-6543219875-10"
+							],
+							"query": [
+								{
+									"key": "originDocument",
+									"value": "12345678"
+								},
+								{
+									"key": "destinationDocument",
+									"value": "87654321"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "reports-by-TypeProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9040/bootcamp51/ms/reports/by-TypeProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9040",
+							"path": [
+								"bootcamp51",
+								"ms",
+								"reports",
+								"by-TypeProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
