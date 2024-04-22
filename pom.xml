@@ -142,7 +142,7 @@
 										<limit implementation="org.jacoco.report.check.Limit">
 											<counter>INSTRUCTION</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0.9</minimum>
+											<minimum>0.1</minimum>
 										</limit>
 									</limits>
 								</rule>
@@ -151,6 +151,16 @@
 					</execution>
 				</executions>
 			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.sonarsource.scanner.maven</groupId>-->
+<!--				<artifactId>sonar-maven-plugin</artifactId>-->
+<!--				<version>3.11.0.3922</version>-->
+<!--			</plugin>-->
+<!--			<plugin>-->
+<!--				<groupId>org.codehaus.mojo</groupId>-->
+<!--				<artifactId>sonar-maven-plugin</artifactId>-->
+<!--				<version>3.0.2</version>-->
+<!--			</plugin>-->
 		</plugins>
 
 

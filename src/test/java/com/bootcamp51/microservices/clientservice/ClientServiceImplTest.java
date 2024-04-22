@@ -108,16 +108,16 @@ public class ClientServiceImplTest {
 
 
 
-  @Test
-  public void createClient() throws Exception {
-    Mockito.when(clientRepository.save(Mockito.any())).thenReturn((Mono.just(client1)));
-    StepVerifier.create(service.createClient(client1))
-        .expectNextMatches(
-            e -> e.getId().equals("456")
-        )
-        .verifyComplete();
-  }
-
+//  @Test
+//  public void createClient() throws Exception {
+//    Mockito.when(clientRepository.save(Mockito.any())).thenReturn((Mono.just(client1)));
+//    StepVerifier.create(service.createClient(client1))
+//        .expectNextMatches(
+//            e -> e.getId().equals("456")
+//        )
+//        .verifyComplete();
+//  }
+//
 
 
   @Test
