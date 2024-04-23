@@ -18,8 +18,18 @@ public class SwaggerConfig {
         .select()
         .apis(RequestHandlerSelectors.basePackage("com.bootcamp51.microservices.controller"))
         .paths(PathSelectors.any())
-        .build();
+        .build()
+        .apiInfo(apiInfo());
   }
 
+
+
+  private ApiInfo apiInfo(){
+    return new ApiInfoBuilder()
+        .title("Api documentacion")
+        .description("Description")
+        .version("1.0")
+        .build();
+  }
 
 }
