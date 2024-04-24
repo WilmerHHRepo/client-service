@@ -29,12 +29,6 @@ public class ClientController {
   @Autowired
   private ClientService clientService;
 
-  @GetMapping
-  @ResponseStatus(HttpStatus.OK)
-  public Flux<Client> findAllClient() {
-    return clientService.findAllClient();
-  }
-
   @GetMapping("/by-name/{name}")
   @ResponseStatus(HttpStatus.OK)
   public Flux<List<Client>> findByName(@PathVariable String name) {

@@ -11,13 +11,6 @@ import reactor.core.publisher.Mono;
  */
 public interface ClientService {
   /**
-   * Method for findAllClient.
-   *
-   * @return List Client.
-   */
-  Flux<Client> findAllClient();
-
-  /**
    * Method for findByName client.
    *
    * @param name Param input.

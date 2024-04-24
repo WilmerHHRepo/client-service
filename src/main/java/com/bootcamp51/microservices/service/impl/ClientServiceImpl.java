@@ -41,16 +41,6 @@ public class ClientServiceImpl implements ClientService {
   }
 
   /**
-   * All client.
-   *
-   * @return Client.
-   */
-  @Override
-  public Flux<Client> findAllClient() {
-    return clientRepository.findAll();
-  }
-
-  /**
    * All client for name.
    *
    * @param name Param input.
